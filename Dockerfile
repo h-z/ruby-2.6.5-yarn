@@ -1,4 +1,4 @@
-FROM ruby:2.6.5
+FROM ruby:2.6.6
 LABEL maintainer="hz@muszaki.info"
 
 RUN apt-get update -qq && \
