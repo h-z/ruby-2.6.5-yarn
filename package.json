@@ -6,6 +6,7 @@
     "lint": "eslint --ext .js,.vue app/javascript",
     "lint:fix": "eslint --fix --ext .js,.vue app/javascript",
     "karma:ci": "NODE_ENV=test karma start --browsers ChromeHeadless",
+    "karma:dev": "NODE_ENV=test karma start --single-run=false --browsers ChromeHeadless",
     "karma": "NODE_ENV=test karma start --browsers Opera"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "@rails/webpacker": "5.2.1",
     "@types/axios": "^0.14.0",
     "axios": "^0.21.0",
+    "babel-plugin-root-import": "^6.6.0",
     "classnames": "^2.2.6",
     "file-loader": "^6.1.1",
     "fontsource-roboto": "^3.0.3",
@@ -40,7 +42,6 @@
   },
   "devDependencies": {
     "@vue/test-utils": "^1.1.2",
-    "babel-plugin-root-import": "^6.6.0",
     "deepmerge": "^4.2.2",
     "eslint": "^7.18.0",
     "eslint-config-standard": "^16.0.2",
