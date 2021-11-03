@@ -8,6 +8,8 @@ ruby '2.6.6'
 gem 'devise'
 gem 'devise-jwt'
 
+gem 'dotenv-rails', groups: %i[development test]
+
 gem 'pundit'
 
 gem 'paper_trail'
@@ -20,7 +22,17 @@ gem 'acts_as_list'
 
 gem 'newrelic_rpm'
 
+gem 'pg_search'
+
 gem 'rollbar'
+
+gem 'rack-attack'
+
+gem 'recaptcha'
+
+gem 'savon', '~> 2.0'
+
+gem 'wsdl_validator'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1'
@@ -31,7 +43,7 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.2.1'
+gem 'webpacker', '~> 5.4'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -59,7 +71,11 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'pry-rails'
   gem 'web-console', '>= 3.3.0'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # gem 'spring'
+  # gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
@@ -68,6 +84,7 @@ group :test do
   gem 'faker'
   gem 'pundit-matchers'
   gem 'rails-controller-testing'
+  gem 'rspec-its'
   gem 'rspec-rails', '~> 4.0.0.beta2'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
